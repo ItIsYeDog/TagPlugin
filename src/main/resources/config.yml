@@ -1,0 +1,29 @@
+# Tag format. Color codes usable, use %tag% where you would like the tag
+tag_format: '&a[&f%tag%&a]&r '
+# Tag placeholder. Use in conjunction with a chat formatting plugin to
+# customize the location of the tag. When empty (default), the tag is prepended
+# to the beginning of chat messages.
+# Note: if someone enters this placeholder in chat, it will also replaced. Make it hard to guess.
+tag_placeholder: ''
+# Maximum length of tag. If set to 0, max length is enabled. If the tag setter
+# has the permission "newtag.longtag", this is ignored
+max_tag_length: 0
+# Allow tags to have their own color codes
+allow_tag_colors: true
+# Disallowed tag content. if any one or more of these words are found
+# in a tag, the user will be asked to choose a different tag.
+disallowed_tags:
+  - admin
+  - mod
+# Strips any special characters from tag. Recommended. (will leave in &)
+alphanumeric_only: true
+# Enable tag permissions. Enables tags for players with the
+# permission "newtag.ptag.<perm>" - permissible tags are configured in
+# tags.yml
+enable_permission_tags: true
+# Enable tab list tag. Will prepend a player's tag to their name in the tab list.
+# Note that colour codes take up a lot of the 16 characters
+enable_tab_list_tag: true
+# Tab list tag format. The tag format to use in the tab list, the total
+# character limit is currently 16, so be careful with colors
+tab_list_tag_format: "[%tag%] "

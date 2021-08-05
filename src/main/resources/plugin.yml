@@ -1,0 +1,39 @@
+name: TagPlugin
+version: ${project.version}
+main: tagplugin.tagplugin.TagPlugin
+authors: [ ItIsYeDog ]
+description: A easy tag plugin.
+commands:
+  newtag:
+    description: Control NewTag
+    usage: /<command> <args>
+    aliases: [tag, nt]
+permissions:
+  newtag.set.own:
+    description: Allows player to set own tag
+    default: op
+  newtag.set.other:
+    description: Allows player to set other players's tags
+    default: op
+  newtag.clear.own:
+    description: Allows player to clear own tag
+    default: op
+  newtag.clear.other:
+    description: Allows player to clear other player's tags
+    default: op
+  newtag.anytag:
+    description: Allows any phrase to be used in tag, regardless of disallowed list
+    default: op
+  newtag.longtag:
+    description: Allows the player setting a tag to bypass the length limit
+    default: op
+  newtag.*:
+    description: All newtag permissions
+    default: op
+    children:
+      newtag.set.own: true
+      newtag.set.other: true
+      newtag.clear.own: true
+      newtag.clear.ohter: true
+      newtag.anytag: true
+      newtag.longtag: true
